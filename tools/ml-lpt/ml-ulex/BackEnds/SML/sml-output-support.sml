@@ -161,6 +161,6 @@ structure SMLOutputSupport =
 	    innerExp)
 
   (* include the templates, which are defined in a compiler-specific way *)
-    open Templates
+    (*open Templates*)
 
   end
