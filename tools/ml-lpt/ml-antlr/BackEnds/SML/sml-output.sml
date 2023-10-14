@@ -573,20 +573,6 @@ structure SMLOutput =
 		   ")\n"])
           end
 
-    fun output (grm, pm, fname) =
-          ExpandFile.expandTemplate {
-	      src = SMLTemplate.template,
-	      dst = fname ^ ".sml",
-	      hooks = [
-		  ("parser",   		parserHook (grm, pm)),
-		  ("token-struct",	tokenStructHook (grm, pm)),
-		  ("tokmod",   		tokmodHook (grm, pm)),
-		  ("header",		headerHook (grm, pm)),
-		  ("usrdefs",		defsHook (grm, pm)),
-		  ("actions",		actsHook (grm, pm)),
-		  ("ehargs",		ehargsHook (grm, pm)),
-		  ("matchfns",		matchfnsHook (grm, pm))
-		]
-	    }
+    fun output (grm, pm, fname) = ()
 
   end

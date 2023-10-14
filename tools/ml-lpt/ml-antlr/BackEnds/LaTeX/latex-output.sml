@@ -204,11 +204,6 @@ structure LaTeXOutput (* : BACK_END *) =
             TextIO.output (strm, g)
           end
 
-    fun output (grm, pm, fname) = (print (" writing " ^ fname ^ ".tex\n");
-          ExpandFile.expandTemplate {
-	      src = LaTeXTemplate.template,
-	      dst = fname ^ ".tex",
-	      hooks = [("grammar", grammarHook (grm, pm))]
-	    })
+    fun output (grm, pm, fname) = ()
 
   end
